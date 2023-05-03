@@ -230,7 +230,10 @@ void pat::PackedCandidate::unpackTrk() const {
                                              charge(),
                                              *(m_.load()),
                                              reco::TrackBase::undefAlgorithm,
-                                             reco::TrackBase::loose);
+                                             reco::TrackBase::loose,
+                                             time(),        //$$
+					                                   0,             //$$
+					                                   timeError());  //$$
   int i = 0;
   if (firstHit_ == 0) {  // Backward compatible
     if (innerLost == validHitInFirstPixelBarrelLayer) {

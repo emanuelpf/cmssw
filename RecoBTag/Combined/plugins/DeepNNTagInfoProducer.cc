@@ -197,8 +197,8 @@ void TemplatedDeepNNTagInfoProducer<IPTag, SVTag>::produce(edm::Event& iEvent, c
         const reco::Track * ptrackPtr = reco::btag::toTrack(ptrackRef);
         const reco::Track & ptrack    = *ptrackPtr;
 
-        float track_pt        = ptrack.pt();
-        // float track_dxy	      = ptrack.dxy(pv->position());
+        // float track_pt        = ptrack.pt();
+        float track_dxy	      = ptrack.dxy(pv->position());
         float track_dz        = ptrack.dz(pv->position());
         float track_time      = ptrack.t0();
         float track_timeError = ptrack.covt0t0();
